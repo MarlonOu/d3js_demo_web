@@ -1,10 +1,6 @@
 from fastapi import FastAPI, Depends, HTTPException, status, Response, APIRouter
 # from sqlalchemy.orm import Session
 
-from models.Movies import Movies
-from database.database import engine, Base, get_db
-from repositories.MovieRepository import MovieRepository
-from schemas.MoviesSchema import MovieRequest, MovieResponse
 import csv
 import os
 from pydantic import BaseModel
