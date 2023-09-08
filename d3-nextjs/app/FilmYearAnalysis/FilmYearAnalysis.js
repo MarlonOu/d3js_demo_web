@@ -28,7 +28,7 @@ export default function FilmYearAnalysis({ bodyWidth }) {
     }
 
     function GenerateFilmYearChart() {
-        getData("http://localhost:8000/api/movies/flim-year-chart")
+        getData(`http://${process.env.DB_HOST}/api/movies/flim-year-chart`)
             .then((res) => {
                 let tempData = []
                 if (yearSelect == year1) {

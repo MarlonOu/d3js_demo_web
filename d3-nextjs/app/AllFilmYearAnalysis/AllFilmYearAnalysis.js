@@ -40,7 +40,7 @@ export default function AllFilmYearAnalysis({ bodyWidth }) {
         const width = parseInt(d3.select(".filmYearLineChart").style("width")) - margin.left - margin.right
         const height = width * 0.4 - margin.top - margin.bottom;
         
-        getData("http://localhost:8000/api/movies/replenish-flim-year-chart")
+        getData(`http://${process.env.DB_HOST}/api/movies/replenish-flim-year-chart`)
             .then((res) => {
                 setFilmYearLineChart(
                     <AllFilmYearLineChart 
@@ -60,7 +60,7 @@ export default function AllFilmYearAnalysis({ bodyWidth }) {
         const width = parseInt(d3.select(".filmYearLineChart").style("width")) - margin.left - margin.right
         const brushHeight = width * 0.2 - margin.top - margin.bottom;
         
-        getData("http://localhost:8000/api/movies/replenish-flim-year-chart")
+        getData(`http://${process.env.DB_HOST}/api/movies/replenish-flim-year-chart`)
             .then((res) => {
                 setFilmYearBrush(
                     <AllFilmTearBrush 

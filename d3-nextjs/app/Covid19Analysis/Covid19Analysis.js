@@ -25,7 +25,7 @@ export default function Covid19Analysis({ bodyWidth }) {
     }
 
     function GenerateCovid19HeatChart(dataType) {
-        getData(`http://localhost:8000/api/covid19/${dataType}`)
+        getData(`http://${process.env.DB_HOST}/api/covid19/${dataType}`)
             .then((res) => {
                 handleSetCovid19HeatChart(res.chartDatas);
             });

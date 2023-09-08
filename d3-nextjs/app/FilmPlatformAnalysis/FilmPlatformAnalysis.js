@@ -40,7 +40,7 @@ export default function FilmPlatformAnalysis({ bodyWidth }) {
         const width = parseInt(d3.select(".filmPlatformPieChart").style("width")) - margin.left - margin.right
         const height = width - margin.top - margin.bottom;
 
-        getData("http://localhost:8000/api/movies/platform-flim-year-pie-chart")
+        getData(`http://${process.env.DB_HOST}/api/movies/platform-flim-year-pie-chart`)
             .then((res) => {
                 setFilmPlatformPieChart(
                     <FilmPlatformPieChart
@@ -59,7 +59,7 @@ export default function FilmPlatformAnalysis({ bodyWidth }) {
         const width = parseInt(d3.select(".filmPlatformBarChart").style("width")) - margin.left - margin.right
         const height = width - margin.top - margin.bottom;
 
-        getDataWithPost("http://localhost:8000/api/movies/platform-flim-year-bar-chart", focusPlatformName)
+        getDataWithPost(`http://${process.env.DB_HOST}/api/movies/platform-flim-year-bar-chart`, focusPlatformName)
             .then((res) => {
                 setFilmPlatformBarChart(
                     <FilmPlatformBarChart

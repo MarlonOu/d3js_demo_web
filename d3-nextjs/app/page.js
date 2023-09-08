@@ -24,7 +24,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="grid grid-cols-8 gap-4 w-full bg-blue-200/80">
+      {/* <div className="grid grid-cols-8 gap-4 w-full bg-blue-200/80">
         <div className="col-span-full bg-blue-500">1</div>
         <div className="col-start-3 col-span-4 bg-red-500">2</div>
         <div className="col-start-2 col-span-2 bg-purple-500">3</div>
@@ -32,12 +32,12 @@ export default function Home() {
         <div className="col-span-2 bg-orange-500">
           <button className="btn-primary">pp</button>
         </div>
-      </div>
+      </div> */}
       <div className="grid grid-cols-1 gap-4 w-full bg-blue-200/80">
 
-        {/* <FilmYearAnalysis bodyWidth={bodyWidth} /> */}
-        {/* <AllFilmYearAnalysis bodyWidth={bodyWidth} /> */}
-        {/* <FilmPlatformAnalysis bodyWidth={bodyWidth} /> */}
+        <FilmYearAnalysis bodyWidth={bodyWidth} />
+        <AllFilmYearAnalysis bodyWidth={bodyWidth} />
+        <FilmPlatformAnalysis bodyWidth={bodyWidth} />
         <Covid19Analysis bodyWidth={bodyWidth} />
 
       </div>
