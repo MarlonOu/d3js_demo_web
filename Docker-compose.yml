@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  fastapi:
+    image: "d3_backend"
+    restart: always
+    build: 
+      context: "./d3_fastapi/"
+      dockerfile: "Dockerfile"
+    ports:
+      - 8000:8000
+      
+  nextjs:
+    image: "d3_nextjs"
+    restart: always
+    build:
+      context: "./d3-nextjs"
+      dockerfile: "Dockerfile"
+      # target: runner
+      # volumes:
+      #   - .:/app
+    ports:
+      - 3000:3000
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - fastapi
+

@@ -1,0 +1,8 @@
+mysql-connector-python
+uvicorn
+fastapi
+python-jose
+python-dotenv
+python-multipart
+pydantic == 1.10.9
+sqlalchemy

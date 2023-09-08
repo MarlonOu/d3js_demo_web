@@ -1,0 +1,21 @@
+.normal-path{
+    stroke: transparent;
+    stroke-width: 0px;
+}
+
+.focus-path{
+    stroke: #cc8e61;
+    stroke-width: 3px;
+}
+
+.click-focus-path{
+    stroke: #c08860;
+    stroke-width: 8px;
+}
+
+.arc text{
+    fill: rgb(62, 60, 60);
+    stroke: rgb(210, 208, 208);
+    stroke-width: 0.5px;
+    text-anchor: middle;
+}
